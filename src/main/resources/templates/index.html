@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ElectroApp - Gestión de Países</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <button id="btnMostrar">Mostrar API</button>
-    <div id="resultado"></div>
+    <div class="container">
+        <h1 class="mb-4">ElectroApp - API de Países</h1>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Gestión de Países</h2>
+            </div>
+            <div class="card-body">
+                <button id="btnMostrarPaises" class="btn btn-primary">Mostrar Países</button>
+                <button id="btnMostrarOtraData" class="btn btn-secondary">Mostrar Otros Datos</button>
+                
+                <div id="resultado" class="mt-3">
+                    <pre>Los resultados de la API se mostrarán aquí...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../templates/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../templates/js/api/ApiRest.js"></script>
 </body>
 </html>
